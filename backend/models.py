@@ -1,5 +1,3 @@
-#mai trebuie conexiunea cu baza de date, functia get trebuie definita
-
 from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
@@ -19,7 +17,7 @@ class User(Base):
     Team = Column(String(50), ForeignKey("Teams.TeamName"), nullable=False)
 
 class Ticket(Base):
-    __tablename__ = "Tickets"
+    __tablename__ = "INCIDENT_TICKETS"
     
     Ticket_Number = Column(String(20), primary_key=True)
     Status = Column(String(30))
