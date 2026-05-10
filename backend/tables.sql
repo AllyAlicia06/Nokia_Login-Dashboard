@@ -14,8 +14,8 @@ CREATE TABLE Users (
 );
 
 -- 3. Crearea tabelului principal de Tickete
-CREATE TABLE Tickets (
-    Ticket_Number INT PRIMARY KEY, 
+CREATE TABLE INCIDENT_TICKETS (
+    Ticket_Number VARCHAR(20) PRIMARY KEY, 
     
     Status VARCHAR(30)
         CHECK (Status IN ('Open', 'In Progress', 'Resolved', 'Closed', 'Waiting for Customer')),
